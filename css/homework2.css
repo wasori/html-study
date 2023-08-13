@@ -1,0 +1,123 @@
+div {
+    box-sizing : border-box;
+}
+
+body {
+    margin : 0;
+}
+html {
+    line-height : 1.15; /*기본 행간 높이*/
+    background-color: gray;
+}
+
+.container {
+    width: 600px;
+    height: 800px;
+    border: 2px solid white;
+    background-color: white;
+    margin: auto;
+}
+
+.main-title {
+    font-size: 30px;
+    margin-left: 50px;
+    width: 500px;
+}
+
+.main-email {
+    width: 500px;
+    height: 100px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.main-name {
+    width: 500px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.main-message {
+    width: 500px;
+    height: 300px;
+    margin: auto;
+}
+
+.main-footer {
+    width: 500px;
+    height: 100px;
+    margin: auto;
+}
+
+.email-title, 
+.name-title,
+.message-title {
+    font-size: 23px;
+    margin: 0px 0px 10px 0px;
+}
+
+input[type=email] {
+    font-size: 20px;
+    width: 500px;
+    height: 45px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+input[type=text] {
+    font-size: 20px;
+    width: 230px;
+    height: 45px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+.name-first {
+    width: 248px;
+    height: 100px;
+    float: left;
+}
+
+.name-last {
+    width: 230px;
+    height: 100px;
+    float: left;
+    margin-left: 20px;
+}
+
+.textbox {
+    width: 500px;
+    height: 45px;
+}
+
+.main-message input {
+    font-size: 20px;
+    width: 500px;
+    height: 230px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+.main-footer input {
+    margin-top: 15px;
+}
+
+.main-footer button {
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+    color: aliceblue;
+    background-color: orange;
+    border: 0;
+    border-radius: 2px;
+    width: 170px;
+    height: 45px;
+}

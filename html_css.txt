@@ -1,0 +1,234 @@
+# html / css 코딩애플
+
+
+[ CSS ]
+1. class
+
+- class는 점찍고 작명
+- 중복 피하기
+
+2. css selector ( 선택자 )
+- class selector (10점)
+.title {
+    text-align: center;
+}
+
+- tag selector (1점)
+p {
+    text-align: center;
+}
+
+- id selector (100점)
+#special {
+    text-align: center;
+}
+
+
+3. .class vs #id 어떤걸로 넣어야하지?
+- id는 자바스크립트 개발할때 사용하기때문에 스타일집어넣을때는 쓰지말자
+
+4. 스타일이 겹칠경우 우선순위에 따라 정해짐
+- style=""(1000점) >>>> id > class > tag
+
+5. CSS = Cascading Style Sheet : 스타일 보관파일
+- Cascading : 폭포처럼 떨어진다? => 나중에 알아볼것
+
+--------------------------------------------------------------------------------------
+
+6. 네모 박스를 넣고 싶으면 
+- <div></div>
+
+7. <div> 주요속성
+- margin (상하좌우 여백)
+- padding(상하좌우 안쪽 여백)
+- border(테두리)
+- border-radius(테두리 둥글게)
+
+8. <div> 속성 가운데정렬
+- margin-left: auto; 
+- margin-right: auto;
+- display:block 기본으로 갖고있음 ( <p>,<h> )
+- display:block : 가로행을 전부 차지해주세요
+
+9. <div><p></p></div>
+- div태그(부모)에 속성줘도 p태그(자식)에 적용
+- 일부스타일은 inherit됨 ( 상속 )
+- 부모태그로부터 inherit 되는 스타일은 중요도가 가장 낮다
+----------------------------------------------------------------------------------------
+
+1. 항상 이걸로 파일 시작
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+2. float 이용한 레이아웃 만들기
+- 레이아웃들을 감싸는 container 박스 만들어두면 좋음
+- float : left; : 요소를 붕 띄워서 왼쪽정렬
+- float: right; 요소를 붕 띄워서 오른쪽 정렬
+- 바로 다른 div를 만들면 붕 띄워져있는 div 뒤로 들어가기때문에 안보임
+- clear : both : float 다음에 오는 요소에게 주면 float로 발생하는 이상한 현상 해결 가능
+- float를 쓰고나서 다음에 오는 요소는 clear주는게 좋음
+
+---------------------------------------------------------------------------------------
+
+1. 가로로 배치하는 또다른 방법
+- display: inline-block; ( 내 크기만큼 차지 )
+- 박스사이 공백제거가 귀찮음
+
+2. inline-block 박스사이 공백 제거방법
+- 박스사이 주석기호 활용
+- 부모태그에 font-size:0px;
+
+3. inline-block 두개의 박스에 글자를쓰면 배치가 이상해짐
+- vertical-align ( 상하정렬 ) : top; (위로)
+- inline인 요소에만 사용가능
+- baseline이 옆에 존재하면 display:inline-block요소들이 baseline위에 오려고함
+
+---------------------------------------------------------------------------------------
+
+1. <nav> = <div>
+- <footer>, <section>도 다 동일 알아보기 쉽게하기위함
+
+2. .navbar li {}
+- selector 문법 중 공백 : ~안에 있는 이라는 뜻
+
+3. .navbar>li{}
+- selector 문법 : ~안에 있는 직계자식 . 자식의 자식 선택 불가
+
+4. 태그에 class 2개 이상 부여하려면
+- class "navbar content" 
+
+5. .container div>div>p>span {} : 비추천
+- p에 클래스 추가해서 짧게 표현
+
+---------------------------------------------------------------------------------------
+
+1. ../ : 상위폴더로 이동하라는 뜻
+- background-image: url(../img/shoes.jpg); : css -> codingapple -> img
+
+2. 배경이미지는 꽉차지않으면 반복된다
+- 반복안되려면 : background-repeat: no-repeat;
+
+3.background-size 빈공간 안남게하기
+- cover : 배경짤려도 상관없으니 빈공간 없이 배경으로 꽉채워라
+- contain : 여백이 남아도 좋으니 배경이 짤리면 안된다.
+
+4. 배경위치조정가능
+- background-position : center ( 가운데 )
+- background-attachment : 스크롤시 이동설정
+- 박스에 보정입히기 : filter: brightness (70%) 등등 -> 글씨있으면 글씨에도 필터입혀짐
+- 배경 여러개 겹치기 가능 :  background-image: url(../img/shoes.jpg) url();
+
+
+5. <div class = "main-background">
+        <h4 class = "main-title">Buy Our Shoes!</h4>
+    </div>
+- 여기서 main-title에 margin-top을 줬는데 사진까지 전부 내려오는 이상한현상 발생
+- margin collapse 현상
+- 박스2개가 위쪽테두리가 겹치면 둘 다 마진을 주는 현상
+- 싫으면 테두리 안붙게하셈
+- main-background에 패딩 살짝 주던지 식으로
+- 박스 2개가 위아래 테두리가 겹쳐도 똑같이 발생함
+
+----------------------------------------------------------------------------------------
+1. <body>에 기본 margin있음 0으로 설정하면 꽉참
+
+2. class명 중복 피하려면 접두어를 많이 사용하셈 main- 같은
+
+3. 좌표속성으로 이동가능
+- position부여하면 (1)좌표이동 가능 (2)공중에 뜸
+- position : relative => 내 원래 위치를 기준으로 이동하세요~
+- position : static => 좌표이동 x
+- position :  fixed => 현재화면이 기준
+- position : absolute => 내 부모 태그가 기준 
+- 정확하게는 내 부모 태그 중 position : relative가진 부모기준
+- position : absolute 준 요소를 가운데 정렬 하려면 left : 0; right: 0; margin : auto; width: 150px; 하면 됨
+
+4. z-index
+- 공중에 떠있는 애들이 많으면.. 누가 맨앞에 옴?
+- 높을수록 앞에온다.
+
+5.max-width
+- 반응형 웹페이지를 만들고 싶으면 % 자주 사용함
+- width %의 문제는 PC사이즈에서 너무 큼 => max-width 사용
+- 박스 2개가 다 max-width 600px인데 padding을 주자마자 600px넘어간다
+- width는 content영역의 너비를 의미하기 때문 (padding, border -> width와 상관없음)
+- 해결책 : content부분만 width로 설정하지 말고 padding, border를 포함하면됨
+- box-sizing: border-box;
+- 개발 시작할때 div { box-sizing: border-box;} 해놓으면 편함
+
+6. 브라우저마다 디자인이 다르게 보일수있음
+- 태그 중 일부가 ie 브라우저에서 이상하게 보인다.
+- 숙련자들은 css파일맨위에 그런 해결책부터 첨부하는 경우가 있다.
+- 검색키워드 : normalize.css 참고하면 됨
+
+7. css 파일작성시 기본으로 쓰면 좋은 속성들
+div {
+  box-sizing : border-box;
+}
+body {
+  margin : 0;
+}
+html {
+  line-height : 1.15; /*기본 행간 높이*/
+}
+
+----------------------------------------------------------------------------------------
+
+1. <form><input>
+- 폼 만들고싶을때 사용
+- <form action=""> : 작성한 내용이 어떤 서버경로로 전달될지
+- <form method = ""> : 작성한 내용이 어떤 방식으로 서버에 전달될지
+- <input type =""> : text, password, email 등등
+- <input value="미리채워진 값">
+- <input placeholder="배경글자">
+- <input name="인풋 이름"> : 서버 개발시 필요
+- <select><option></option></select>
+- <textarea></textarea>
+- 전송버튼 : <input type="submit"> , <button type="submit">전송</button>
+- 외우지말고 그때그때 찾아서 쓰셈
+- input selector 속성 :  input[type=text]
+
+2. class 재사용 했는데 추가적인 디자인 필요하면
+- class 하나 더 추가해서 꾸며라
+
+3. input checkbox
+- <Label>태그 : 글자 눌러도 체크박스에 체크됨. input id= "" 와 label for="" 똑같은거로 설정
+
+-------------------------------------------------------------------------------------------------
+
+1. 표를 만들일이 생긴다. <table>
+- 가로행 만들때 <tr>
+- 세로열 만들때 <td>
+- 제목용 세로열만들기 <th>
+
+2. thead, tbody 용도
+- 제목 행은 <thead>안에 일반행은 <tbody>안에 넣으면 좋음
+
+3. table은 기본적으로 틈이 존재함
+- 없애려면 border-collapse : collapse
+
+4. 셀 안의 요소 상하정렬
+- vertical-align : top/ middle/ bottom
+- vertical-align => 세로정렬
+~ 용도 1 : 글씨간의 세로정렬할때 사용 . inline/ inline-block.요소 간의 세로정렬
+~ 용도 2: table 안에서 세로정렬할때. top middle bottom
+
+5. display : inline => 항상 옆으로 채워지는 폭과 너비가 없는 요소
+6. 일반 <div>로 표만들기
+
+7. td 폭 조정시 유의사항
+- width:  => 최대한 이만큼 차지해보세요~라는뜻
+- 같은 열에 하나만 길이가 바뀌어도 모든열이 같아짐
+
+8.nth-child() 셀렉터 
+- .cart-table th: nth-child(2) {
+  width: 400px;
+} => 2번째 나오는 애들

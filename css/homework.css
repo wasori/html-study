@@ -1,0 +1,96 @@
+.container {
+    width: 100%;
+    height: 500px;
+    border-bottom: 1px solid gray;
+}
+
+.left {
+    width: 80%;
+    height: 500px;
+    float: left;
+    /* background-color: aqua; */
+}
+
+.right {
+    width: 20%;
+    height: 500px;
+    float: left;
+    /* background-color: aquamarine; */
+}
+
+.left_1 {
+    width: 90%;
+    height: 100px;
+    /* border: 2px solid blue; */
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+.left_2 {
+    width: 90%;
+    height: 250px;
+    /* border: 2px solid blueviolet; */
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.left_1_1 {
+    width: 100px;
+    height: 100%;
+    float: left;
+    /* border: 2px solid sandybrown; */
+}
+
+.left_1_2 {
+    width: 130px;
+    height: 100%;
+    float: left;
+    /* border: 2px solid darkorchid; */
+}
+
+.profile_name {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.profile_time {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.content1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 10px 10px 10px;
+}
+
+.content2 {
+    font-size: 25px;
+    color: gray;
+    margin: 20px 10px 10px 10px;
+}
+
+.picture {
+    width: 100%;
+    height: 400px;
+    margin-top: 45px;
+}
+
+.navbar li{
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar a {
+    font-size: 12px;
+    text-decoration: none;
+}
