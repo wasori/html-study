@@ -4,7 +4,7 @@
     background-image: url(../img/shoes.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position : center;
+    background-position: center;
     background-attachment: fixed;
     padding: 1px;
     text-align: center;
@@ -39,7 +39,7 @@
     width: 80%;
     max-width: 600px;
     height: 200px;
-    margin : auto;
+    margin: auto;
     position: relative;
     text-align: center;
     padding: 20px;
@@ -109,4 +109,13 @@ body {
     padding: 10px;
     display: block;
     margin-left: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-title {
+        font-size : 30px
+    }
+    .nav-item {
+        font-size : 12px
+    }
 }

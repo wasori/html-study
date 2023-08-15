@@ -232,3 +232,46 @@ html {
 - .cart-table th: nth-child(2) {
   width: 400px;
 } => 2번째 나오는 애들
+
+-------------------------------------------------------------------------------------------
+1. 웹폰트 첨부방법
+-font-family:'gulim, 'dotum'; -> gulim안되면 dotum적용되게하는거
+~ inherit됨
+- 폰트 다운받아서 폴더안에 넣고 쓰기
+@font-face {
+    font-family: 'wow';
+    src: url();
+}
+font-family: 'wow';
+- 한글폰트는 사이즈가 너무 큼 : 사이트로딩시간 너무 늘어남 1~2개만 쓰자
+- 용량줄이려면 .woff 쓰면됨 (웹용)
+- font-weight 그냥주면 안이쁨 굵은폰트를 따로 등록해서 쓰는게 낫다.
+- 폰트파일 호스팅해주는 google fonts에서 가져오는것도 좋음
+- 폰트 부드럽게 처리하려면 살짝 회전시켜보셈
+- p, h4,h3,h2,h1 { transform : rotate(50deg) }
+
+--------------------------------------------------------------------------------------------
+1. display : flex =>박스 가로 배치가 쉬워짐
+- 부모한테 flex 줌
+- width: 600px 는 진짜 600px가 아니고 최대한 600px임
+
+2. flex이용시 정렬
+- justify-content : center, flex-start, space-between 등등
+- flex-direction: column (세로배치) row (가로배치) => 반응형 디자인으로 유용
+- flex-wrap : width크면 밑으로 내려보내고 싶을때
+- align-items: 상하정렬
+- flex-grow:1,2 : 박스크기를 비율로 설정 가능
+
+
+
+
+
+
+
+
+
+
+
+
+
+
