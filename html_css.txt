@@ -328,7 +328,12 @@ font-family: 'wow';
 
 ---------------------------------------------------------------------------
 
+[bootstrap]
 
+1.bootstrap.min.css , bootstrap.bundle.min.js 가져와서 HTML에 넣어야함
+2. 뼈대 디자인할때 유용함. 내 css파일 넣고 거기다가 커스텀 하면 됨
+3. 개발시간 단축하는 utility class 제공됨
+4. class = "row" 는 내부 12칸으로 쪼개줌. 4등분 하려면 col-3 x 4 는 12
 
 
 
